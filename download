@@ -1,0 +1,19 @@
+---
+name: Feature Request
+about: Suggest an improvement or new capability
+title: "[FEATURE] "
+labels: enhancement
+assignees: ''
+---
+
+## What problem would this solve?
+Describe the operational or technical problem you are facing.
+
+## Proposed solution
+Describe what you'd like the tool to do differently.
+
+## Alternatives considered
+Any other approaches you have tried or thought about?
+
+## Additional context
+Add any screenshots, sample data structures, or references that might help.

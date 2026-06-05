@@ -1,6 +1,38 @@
-# Contributing
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+*.spec
 
-1. Fork the repository
-2. Create a branch
-3. Commit changes
-4. Submit a Pull Request
+# Virtual environments
+venv/
+env/
+.venv/
+
+# PyInstaller output
+dist/
+build/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Output data — do not commit real consumer data
+Low usage Industry Consumer Officewise/
+*.xlsx
+*.xls
+
+# Icon (add your own)
+app_icon.ico

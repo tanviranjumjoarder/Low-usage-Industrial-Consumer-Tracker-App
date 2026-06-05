@@ -1,3 +1,30 @@
-MIT License
+# Changelog
 
-Copyright (c) 2026 Tanvir Anjum Joarder
+All notable changes to this project will be documented here.
+
+The format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
+
+---
+
+## [1.0.0] — Initial Release
+
+### Added
+- GUI desktop application built with Python `tkinter`
+- Multi-file Excel import: load any number of monthly billing exports at once
+- Automatic billing month detection from data column (`বিল মাস`) or filename
+- Merge engine: consolidates all monthly files into one master DataFrame with one row per unique consumer
+- Office-wise splitting: separates consumers into 10 sub-office Excel files based on the first 6 digits of their account number (`হিসাব নম্বর`)
+- Low-usage filter: configurable threshold (default 150 kWh) — keeps only consumers who recorded usage at or below the threshold in any tracked month
+- Formatted Excel output: colour-coded headers (dark blue / medium blue), alternating row fills, frozen panes at column C / row 3, auto column widths
+- Missing monthly values filled with `0` (not blank) to ensure filter logic works correctly across all months
+- Mobile number normalisation: strips decimals, prepends leading zero if 10 digits, marks missing as `N/A`
+- Bengali month labels in output column headers (জানুয়ারি, ফেব্রুয়ারি, … ডিসেম্বর)
+- Threaded processing — GUI remains responsive during long runs
+- Colour-coded live log panel (green = success, red = error, yellow = warning, blue = info)
+- Windows batch launchers: `Run_Merger.bat`, `Low_Consumption_Consumer_Tracker.bat`
+- PyInstaller build script: `Build_EXE.bat` produces a standalone `Electricity Bill Merger.exe`
+- Auto-installs `pandas` and `openpyxl` on first run if missing
+- Output folder opens automatically in Windows Explorer on completion
+
+### Offices supported
+HQ, Daulotpur, Kumarkhali, Mirpur, Bheramara, Swastipur, Khoksha, Poradah, Pragpur, Panti
