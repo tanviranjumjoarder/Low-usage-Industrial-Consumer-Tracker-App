@@ -1,0 +1,53 @@
+============================================================
+ ELECTRICITY BILL MERGER — How to run as a double-click app
+============================================================
+
+Put ALL these files together in ONE folder (e.g. on your Desktop):
+
+   merge_app.py
+   app_icon.ico
+   Run Merger.vbs        <-- silent launcher (no black window)
+   Run Merger.bat        <-- alternative launcher
+   Build EXE.bat         <-- optional: build a real .exe
+
+------------------------------------------------------------
+ OPTION 1  — Easiest (requires Python installed)
+------------------------------------------------------------
+1. Make sure Python 3.8+ is installed (https://www.python.org).
+   During install, tick "Add Python to PATH".
+2. Double-click  "Run Merger.vbs"
+   The GUI opens directly. No black console window.
+
+To give it a custom icon on your Desktop:
+   - Right-click "Run Merger.vbs" -> Send to -> Desktop (create shortcut)
+   - Right-click the new shortcut -> Properties -> Change Icon
+   - Browse to  app_icon.ico  and pick it -> OK
+   - Rename the shortcut to "Electricity Bill Merger"
+   Done — double-click that icon any time to open the app.
+
+------------------------------------------------------------
+ OPTION 2  — Standalone .exe (recommended for sharing)
+------------------------------------------------------------
+Build a single-file Windows app with the lightning-bolt icon
+already baked in. Run this ONCE on your PC:
+
+1. Make sure Python 3.8+ is installed.
+2. Double-click  "Build EXE.bat"
+   (Takes 1-2 minutes the first time.)
+3. When finished, look inside the new "dist" folder:
+      dist\Electricity Bill Merger.exe
+   That single file IS your app. Copy it anywhere
+   (Desktop, USB stick, another PC without Python) and
+   double-click to run.
+
+------------------------------------------------------------
+ TROUBLESHOOTING
+------------------------------------------------------------
+* "Python is not recognized" — re-install Python and tick
+  "Add Python to PATH" on the first screen of the installer.
+
+* The .vbs launcher does nothing — open Run Merger.bat
+  instead; if Python is missing, it will tell you.
+
+* Build EXE.bat fails on "pip install" — run it again with
+  internet connection; sometimes the first install times out.
